@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    h1{
+        @apply text-5xl;
+    }
+    h2{
+        @apply text-4xl;
+    }
+    h3{
+        @apply text-3xl;
+    }
+    h4{
+        @apply text-2xl ;
+    }
+    h5{
+        @apply text-xl;
+    }
+    h6{
+        @apply text-lg;
+    }
+    p{
+        @apply text-peraghaph font-normal ;
+    }
+    li{
+        @apply text-lg;
+    }
+}
+
+@layer components{
+    .btn{
+        @apply px-3 lg:px-5 py-2 rounded-md inline-block border-2 border-transparent;
+    }
+    .btn-secondary{
+        @apply text-white bg-secondary;
+    }
+}
+
+/* about section */
+.about-item{
+    @apply grid md:grid-cols-2 gap-10 ;
+}
+
+.about-item:nth-child(2n) .about-img{
+    @apply md:order-3;
+}
+
+.check-list ul{
+    @apply grid grid-cols-1 md:grid-cols-2;
+}
+.rostock{
+    @apply grid  md:grid-cols-2;
+}
+
+.check-list li::before {
+	content: "";
+	position: absolute;
+	background: url(assets/img/Check.png) no-repeat scroll center/contain;
+	width: 27px;
+	height: 27px;
+	left: 0;
+	top: 22px;
+}
+.check-list li {
+	position: relative;
+	padding: 20px 0 0 46px;
+	font-size: 18px;
+	font-weight: normal;
+}
+.header-manu ul li a:hover {
+	color: #2581C4;
+}
+
+/* accodion-section */
+.a1-img::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(assets/img/shape1.svg) no-repeat scroll center/contain;
+    z-index: -1;
+    @apply md:content-[""] md:left-[-142px] top-[-56px] lg:left-[-199px] lg:top-[-44px] ;
+  }
+  .a2-img::before {
+    height: 100%;
+    width: 100%;
+    background: url(assets/img/f2.svg) no-repeat scroll center/contain;
+    position: absolute;
+    z-index: -1;
+    @apply  md:content-[""] md:top-[100px] right-[-78px] lg:top-[130px] lg:right-[-138px];
+  }
+  
+  .accordion-sec {
+    background: linear-gradient( #f0f9ff , transparent);
+  }
+
+
+.accordion-title.active::before {
+    content: "\f056";
+    font-family: "Font Awesome 6 Free";
+}
+  
+  .accordion-title::before {
+    font-family: "Font Awesome 6 Free";
+    @apply text-primary content-["\f055"] text-[23px] border-8 border-primary rounded-full flex justify-center left-0 w-11 absolute cursor-pointer top-1/2 -translate-y-1/2;
+  }
+  .r-img{
+    background: url(assets/img/g2.png) no-repeat scroll center/contain;
+    padding: 21px;
+    margin: auto;
+    margin-bottom: auto;
+    display: flex;
+    margin-bottom: -50px;
+    position: relative;
+    max-width: 84px;
+    z-index: 1;
+  }
+  .go-top {
+	position: fixed;
+	background: #ff8300;
+	z-index: 10;
+	bottom: 40px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	border-radius: 50%;
+}
