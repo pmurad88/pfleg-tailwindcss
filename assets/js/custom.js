@@ -20,4 +20,13 @@ $(document).ready(function(){
         $("body, html").animate({scrollTop:0}, 999);
      });
 
+
+     $(".h-menu").clone().prependTo(".mobile-menu");
+    $(".menutrigger").on('click', function(){
+    $(this).toggleClass("active");
+    $(".mobile-menu").stop(true,false,true).slideToggle();
+    
+    $('body').toggleClass('overflow-hidden');
+    });
+
 });
