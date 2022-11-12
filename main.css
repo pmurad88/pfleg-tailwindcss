@@ -130,7 +130,7 @@
     width: 100%;
     background: url(assets/img/shape1.svg) no-repeat scroll center/contain;
     z-index: -1;
-    @apply md:content-[""] md:left-[-142px] top-[-56px] lg:left-[-199px] lg:top-[-44px] ;
+    @apply md:content-[""] md:left-[-142px] top-[-56px] lg:left-[-199px] lg:top-[-44px]  ;
   }
   .a2-img::before {
     height: 100%;
@@ -157,26 +157,8 @@
   }
   .r-img{
     background: url(assets/img/g2.png) no-repeat scroll center/contain;
-    padding: 21px;
-    margin: auto;
-    margin-bottom: auto;
-    display: flex;
-    margin-bottom: -50px;
-    position: relative;
-    max-width: 84px;
-    z-index: 1;
+    @apply p-[21px] m-auto  flex mb-[-50px] relative max-w-[84px] z-10;
   }
-  .go-top {
-	position: fixed;
-	background: #ff8300;
-	z-index: 10;
-	bottom: 40px;
-	right: 20px;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-	border-radius: 50%;
+.go-top {
+    @apply fixed bg-secondary z-10 bottom-10 w-10 h-10 right-5 flex items-center justify-center text-white rounded-full;
 }
