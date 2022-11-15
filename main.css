@@ -160,5 +160,5 @@
     @apply p-[21px] m-auto  flex mb-[-50px] relative max-w-[84px] z-10;
   }
 .go-top {
-    @apply fixed bg-secondary z-10 bottom-10 w-10 h-10 right-5 flex items-center justify-center text-white rounded-full;
+    @apply fixed bg-secondary z-10 bottom-10 w-10 h-10 right-5 flex items-center justify-center text-white rounded-full cursor-pointer;
 }
